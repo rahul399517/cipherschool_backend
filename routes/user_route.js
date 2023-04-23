@@ -158,7 +158,7 @@ router.get("/search/:key", async (req, res) => {
     $or: [
       { fullName: { $regex: req.params.key } },
       { email: { $regex: req.params.key } },
-      { location: { $regex: req.params.key } },
+      { country: { $regex: req.params.key } },
     ],
   }); //$or is used when ever we are searching in more than one field
   //$regex: req.params.key are all standard way to search the data in particular fields
